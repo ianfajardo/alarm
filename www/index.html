@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+
+    <!-- compiled css output -->
+    <link href="css/ionic.app.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter" ng-controller="alarmCtrl">
+
+    <ion-pane>
+      <ion-header-bar class="bar-stable">
+        <h1 class="title">Alarm Clock App</h1>
+      </ion-header-bar>
+      <ion-content padding="true" scroll="false">
+        <div class="row">
+          <div class="col col-33" style="text-align:center;">
+            <i class="icon ion-plus" on-tap="increase()" on-hold="increaseHold()" on-release="release()" style="display:block; font-size:25px;; padding-bottom:20px;"></i>
+            <div style="width:100%; height:100px;font-size:25px;text-align:center">
+            {{hour}}
+            <i class="icon ion-minus" on-tap="decrease()" style="display:block; font-size:25px; padding-top:20px;"></i>
+            </div>
+          </div>
+          <div class="col col-33">
+            <div style="font-size:2em;text-align:center">
+            {{minute}}
+            </div>
+          </div>
+          <div class="col col-33">
+            <div style="font-size:2em;text-align:center">
+            {{period}}
+            </div>
+          </div>
+        </div>
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>
